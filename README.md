@@ -22,6 +22,13 @@
     If you are not in one of these cities, countries, or regions and are blocked, please reach out to https://hub.docker.com/support/contact/
     </body>
     </html>
+В случае ошибки с правами и codeigniter:
+
+![image](https://github.com/user-attachments/assets/da522995-0355-4a80-b206-84101b35a389)
+
+docker exec -it fullstack-test-web-1 ls -la /var/www/html/writable/cache # проверка www-data
+Примените права внутри контейнера: Если права все еще недостаточны, выполните:
+docker exec -it fullstack-test-web-1 chmod -R 777 /var/www/html/writable/cache
 
 Нужно использовать прокси сервер
 
